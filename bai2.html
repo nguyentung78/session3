@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <style>
+        label {
+            font-weight: bold;
+            display: block;
+        }
+        select {
+            width: 400px;
+            height: 20px;
+            margin-top: 5px;
+        }
+        .form {
+            margin-bottom: 15px;
+        }
+        .radio, .checkbox {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .Other {
+            margin: 10px 20px;
+        }
+        .radio label, .checkbox label {
+            font-weight: normal;
+        }
+        .radio input, .checkbox input {
+            margin-top: 5px;
+        }
+        .giainputs {
+            display: flex;
+            align-items: center;
+        }
+        input[name="dolla"] {
+            width: 70px; 
+            margin-right: 5px;
+        }
+        input[name="cents"] {
+            width: 20px; 
+            margin-left: 5px;
+        }
+        .gialabels {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 5px; 
+        }
+        .gialabels label {
+            margin-left: 30px; 
+            font-weight: normal;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+            height: 100%;
+        }
+        th, td {
+            border: 1px solid black; 
+            padding: 8px; 
+        }
+        tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+    </style>
+</head>
+<body>
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survey</p>
+    <hr>
+    <form action="" method="post">
+        <div class="form">
+            <label for="age">What is your age range?</label>
+            <select name="age" id="age">
+                <option value="18-24">18-24</option>
+                <option value="25-32">25-32</option>
+                <option value="32-40">32-40</option>
+            </select>
+        </div>
+        <div class="form">
+            <label for="luong">What is your yearly income range?</label>
+            <select name="luong" id="luong">
+                <option value="0-25">$0 - $25,000</option>
+                <option value="25-32">$25,000 - $32,000</option>
+                <option value="32-40">$32,000 - $40,000</option>
+            </select>
+        </div>
+        <div class="form">
+            <label>Gender Identity</label>
+            <div class="radio">
+                <label><input type="radio" name="gender" id="male"> Male</label>
+                <label><input type="radio" name="gender" id="female"> Female</label>
+                <label><input type="radio" name="gender" id="nonbinary"> Nonbinary</label>
+                <label><input type="radio" name="gender" id="other"> Other</label>
+            </div>
+        </div>
+        <div class="Other">
+            <input type="text" name="Other" id="Other" >
+        </div>
+        <div class="form">
+            <label>Which of the following products have you purchased in the last 2 months? Please check all that apply.</label>
+            <div class="checkbox">
+                <label><input type="checkbox" name="pr1" id="pr1"> Product 1</label>
+                <label><input type="checkbox" name="pr2" id="pr2"> Product 2</label>
+                <label><input type="checkbox" name="pr3" id="pr3"> Product 3</label>
+            </div>
+        </div>
+        <div class="form">
+            <label>How often would you use our new product?</label>
+            <div class="radio">
+                <label><input type="radio" name="frequency" id="daily"> Daily</label>
+                <label><input type="radio" name="frequency" id="weekly"> Weekly</label>
+                <label><input type="radio" name="frequency" id="monthly"> Monthly</label>
+            </div>
+        </div>
+        <div>
+            <label>What would you pay for the new product?</label>
+            <div class="giainputs">
+                $<input type="text" name="dolla" id="dolla"> -
+                <input type="text" name="cents" id="cents">
+            </div>
+            <div class="gialabels">
+                <label for="dolla">Dollars</label>
+                <label for="cents">Cents</label>
+            </div>
+        </div>
+        <div class="form">
+            <label>What features would you like to see in the new product.</label>
+            <textarea name="newpr" id="newpr" rows="8" cols="150"></textarea>
+        </div>
+        <div class="form">
+            <p>Please rate your level of agreement with the following statement.</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Strongly Disagree</th>
+                    <th>Disagree</th>
+                    <th>Agree</th>
+                    <th>Strongly Agree</th>
+                </tr>
+                <tr>
+                    <td>Our product are priced fairly.</td>
+                    <td style="text-align: center;"><input type="radio" name="r1" id="r1"><br>1</td>
+                    <td style="text-align: center;"><input type="radio" name="r1" id="r2"><br>2</td>
+                    <td style="text-align: center;"><input type="radio" name="r1" id="r3"><br>3</td>
+                    <td style="text-align: center;"><input type="radio" name="r1" id="r4"><br>4</td>
+                </tr>
+                <tr>
+                    <td>Our product are hight quality.</td>
+                    <td style="text-align: center;"><input type="radio" name="r1" id="r2"><br>1</td>
+                    <td style="text-align: center;"><input type="radio" name="r2" id="r2"><br>2</td>
+                    <td style="text-align: center;"><input type="radio" name="r3" id="r2"><br>3</td>
+                    <td style="text-align: center;"><input type="radio" name="r4" id="r2"><br>4</td>
+                </tr>
+                <tr>
+                    <td>You would recommend our product to a friend or coworker.</td>
+                    <td style="text-align: center;"><input type="radio" name="r1" id="r3"><br>1</td>
+                    <td style="text-align: center;"><input type="radio" name="r2" id="r3"><br>2</td>
+                    <td style="text-align: center;"><input type="radio" name="r3" id="r3"><br>3</td>
+                    <td style="text-align: center;"><input type="radio" name="r4" id="r3"><br>4</td>
+                </tr>
+            </table>
+        </div>
+        <input type="button" name="submit" id="submit" value="Submit">
+    </form>
+</body>
+</html>

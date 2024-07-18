@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+            margin: 0; 
+            background-color:white;
+        }
+
+        .form-container {
+            width: 400px;
+            padding: 10px; 
+            background-color: white;
+            border: 15px solid aqua;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .vientrang {
+            border: 1px solid white;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: red;
+            color: white;
+            padding: 4px;
+            margin: 1px 1px 10px 1px;
+        }
+
+        input[type="text"] {
+            width: 200px; 
+            box-sizing: border-box; 
+            margin-bottom: 1px; 
+        }
+
+        input[type="email"] {
+            width: 150px; 
+            box-sizing: border-box;
+            margin-bottom: 1px; 
+        }
+
+        .canle {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .canle label {
+            color: rgb(60, 60, 250);
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .checkbox {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .checkbox label {
+            color: #f08d29;
+            width: auto;
+            text-align: left;
+            margin-right: 0;
+        }
+
+        .canle input[type="submit"],
+        .canle input[type="reset"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="vientrang">
+            <form action="" method="post">
+                <h2>Sở thích của bạn</h2>
+                <div class="canle">
+                    <label for="yourname">Họ và tên: </label>
+                    <input type="text" name="yourname" id="yourname"><br>
+                </div>
+                <div class="canle">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="canle">
+                    <label>Sở thích:</label>
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="sport" id="sport"> Thể thao</label>
+                        <label><input type="checkbox" name="music" id="music"> Âm nhạc</label>
+                        <label><input type="checkbox" name="read" id="read"> Đọc sách</label>
+                        <label><input type="checkbox" name="web" id="web"> Lướt web</label>
+                        <label><input type="checkbox" name="game" id="game"> Chơi game</label>
+                        <label><input type="checkbox" name="movie" id="movie"> Điện ảnh</label>
+                        <label><input type="checkbox" name="travel" id="travel"> Du lịch</label>
+                    </div>
+                </div>
+                <div class="canle">
+                    <label></label>
+                    <input type="submit" name="submitform" value="Gửi thông tin">
+                    <input type="reset" name="resetform" value="Nhập lại">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
